@@ -36,6 +36,8 @@ fi
 if [ -z "$INPUT_COMMIT_MESSAGE" ]
 then
   INPUT_COMMIT_MESSAGE="Update from https://github.com/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}"
+else
+  INPUT_COMMIT_MESSAGE=$(eval echo $INPUT_COMMIT_MESSAGE)
 fi
 
 echo "Adding git commit"
